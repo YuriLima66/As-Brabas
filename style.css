@@ -1,4 +1,3 @@
-/* Reset e estilos gerais */
 * {
   padding: 0;
   margin: 0;
@@ -17,7 +16,6 @@ main {
   background-color: black;
 }
 
-/* Estilo do header */
 header {
   background: url(imagens/neo_quimica_arena_teve_um_mosaico_em_homenagem_1tqb.jpg) no-repeat center;
   background-size: cover;
@@ -27,7 +25,6 @@ header {
   position: relative;
 }
 
-/* Logo */
 .gavioes {
   position: sticky;
   top: 5px;
@@ -36,10 +33,9 @@ header {
   width: 15vw;
   max-width: 110px;
   transition: ease-in-out 0.2s;
-  z-index: 10; /* Garantir que a logo fique sobre outros elementos */
+  z-index: 10;
 }
 
-/* Menu padrão */
 .menuzinho {
   background-color: black;
   border-bottom: 3px solid white;
@@ -73,18 +69,17 @@ header {
   font-size: 1.1em;
 }
 
-/* Menu hambúrguer */
 .hamburger-menu {
-  display: none; /* Escondido por padrão */
+  display: none;
   flex-direction: column;
   cursor: pointer;
-  position: fixed; /* Ajusta a posição */
+  position: fixed;
   top: 0;
   background-color: black;
   padding: 3px;
   width: 100%;
   align-items: center;
-  z-index: 11; /* Para garantir que fique acima do conteúdo */
+  z-index: 11;
 }
 
 .hamburger-menu .bar {
@@ -95,18 +90,16 @@ header {
   transition: 0.3s;
 }
 
-/* Menu de navegação responsivo */
 .menu-hamburguer {
-  display: none; /* Escondido por padrão */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background-color: black;
-  z-index: 10; /* Um nível abaixo do hamburger-menu */
-  padding-top: 60px; /* Ajuste conforme necessário */
+  z-index: 10;
+  padding-top: 60px;
   text-align: center;
-  
 }
 
 .menu-hamburguer ul {
@@ -124,16 +117,14 @@ header {
   text-decoration: none;
 }
 
-/* Mostrar o menu quando a classe 'active' é adicionada */
 .menu-hamburguer.active {
   display: block;
 }
 
-/* Flexbox no formulário */
 .formulario {
   display: flex;
   flex-direction: column;
-  width: 80vw; /* Ajuste conforme necessário */
+  width: 80vw;
   margin: 20px auto;
   background-color: white;
   padding: 20px;
@@ -166,7 +157,6 @@ header {
   background-color: #333;
 }
 
-/* Estilos para o conteúdo */
 .banner_article {
   position: absolute;
   width: 100%;
@@ -246,7 +236,16 @@ article {
   font-size: larger;
 }
 
-/* Redes sociais */
+.texto_formulario {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  text-align: justify;
+  padding: 5%;
+  width: 60vw;
+  margin: 40px auto;
+}
+
 .redesocialpai {
   right: 15px;
   width: 50px;
@@ -267,7 +266,6 @@ article {
   height: 40px;
 }
 
-/* Footer */
 footer {
   padding: 10px;
   margin: 0 -20px;
@@ -281,13 +279,11 @@ footer > p {
   text-align: center;
 }
 
-/* List items */
 li {
   list-style-type: none;
   text-decoration: none;
 }
 
-/* Media Queries para responsividade */
 @media (max-width: 768px) {
   .menuzinho {
     display: none;
