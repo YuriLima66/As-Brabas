@@ -1,3 +1,4 @@
+/* Reset e estilos gerais */
 * {
   padding: 0;
   margin: 0;
@@ -8,10 +9,15 @@
   text-align: center;
 }
 
+body {
+  margin: 0;
+}
+
 main {
   background-color: black;
 }
 
+/* Estilo do header */
 header {
   background: url(imagens/neo_quimica_arena_teve_um_mosaico_em_homenagem_1tqb.jpg) no-repeat center;
   background-size: cover;
@@ -21,6 +27,7 @@ header {
   position: relative;
 }
 
+/* Logo */
 .gavioes {
   position: sticky;
   top: 5px;
@@ -28,40 +35,141 @@ header {
   transform: translate(50%);
   width: 15vw;
   max-width: 110px;
-  z-index: 1;
+  transition: ease-in-out 0.2s;
+  z-index: 10; /* Garantir que a logo fique sobre outros elementos */
 }
 
+/* Menu padrão */
 .menuzinho {
   background-color: black;
   border-bottom: 3px solid white;
-  border-top:  3px solid white;
+  border-top: 3px solid white;
   position: absolute;
-  width: 100vw;
-  bottom: 0px;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
 }
 
-header>nav>ul>li {
-  bottom: 0%;
+.menuzinho ul {
+  list-style: none;
   display: flex;
-  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.menuzinho li {
   text-shadow: 2px 1px black;
-  align-items: center;
-  padding: 0px 60px;}
+  padding: 0 20px;
+}
 
-
-
-li>a {
+.menuzinho a {
   text-decoration: none;
   color: white;
+  font-size: 1.2em;
 }
 
-header>nav>ul>li>a:hover {
-  font-size: 110%;
+.menuzinho a:hover {
+  font-size: 1.1em;
 }
 
+/* Menu hambúrguer */
+.hamburger-menu {
+  display: none; /* Escondido por padrão */
+  flex-direction: column;
+  cursor: pointer;
+  position: fixed; /* Ajusta a posição */
+  top: 0;
+  background-color: black;
+  padding: 3px;
+  width: 100%;
+  align-items: center;
+  z-index: 11; /* Para garantir que fique acima do conteúdo */
+}
+
+.hamburger-menu .bar {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+/* Menu de navegação responsivo */
+.menu-hamburguer {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 10; /* Um nível abaixo do hamburger-menu */
+  padding-top: 60px; /* Ajuste conforme necessário */
+  text-align: center;
+  
+}
+
+.menu-hamburguer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-hamburguer ul li {
+  padding: 15px;
+}
+
+.menu-hamburguer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Mostrar o menu quando a classe 'active' é adicionada */
+.menu-hamburguer.active {
+  display: block;
+}
+
+/* Flexbox no formulário */
+.formulario {
+  display: flex;
+  flex-direction: column;
+  width: 80vw; /* Ajuste conforme necessário */
+  margin: 20px auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.formulario label {
+  margin: 10px 0 5px;
+}
+
+.formulario input, 
+.formulario textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.formulario button {
+  padding: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.formulario button:hover {
+  background-color: #333;
+}
+
+/* Estilos para o conteúdo */
 .banner_article {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   max-width: 1330px;
   max-height: 800px;
   left: 50%;
@@ -77,7 +185,7 @@ header>nav>ul>li>a:hover {
   display: flex;
   position: relative;
   opacity: 0;
-  width: 100vw;
+  width: 100%;
   max-width: 1330px;
   max-height: 800px;
   left: 50%;
@@ -87,7 +195,7 @@ header>nav>ul>li>a:hover {
 
 .titulos:hover {
   opacity: 1;
-  width: 100vw;
+  width: 100%;
   max-width: 1330px;
   max-height: 800px;
   margin-right: 50%;
@@ -113,18 +221,11 @@ article {
   padding: 2% 5%;
 }
 
-#texto_historia>h1 {
+#texto_historia > h1,
+#texto_historia > h2 {
   background-color: white;
   color: black;
   border-bottom: 3px solid black;
-}
-
-#texto_historia>h2 {
-  font-size: 1.5em;
-  background-color: white;
-  color: black;
-  border-bottom: 3px solid black;
-
 }
 
 #texto_historia {
@@ -141,11 +242,11 @@ article {
   box-shadow: 3px 3px 4px rgb(255, 0, 255);
 }
 
-#texto_historia>strong {
+#texto_historia > strong {
   font-size: larger;
 }
 
-
+/* Redes sociais */
 .redesocialpai {
   right: 15px;
   width: 50px;
@@ -156,40 +257,54 @@ article {
   border-radius: 50px;
 }
 
-.redesocialpai>section>a>img {
+.redesocialpai > section > a > img {
   height: 35px;
   display: block;
   margin: 10px 8px;
 }
 
-.redesocialpai>section>a>img:hover {
+.redesocialpai > section > a > img:hover {
   height: 40px;
 }
 
-.formulario{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 40vw;
-  align-items: flex-start;
-}
-
+/* Footer */
 footer {
-
   padding: 10px;
-  margin: 0x -20px;
+  margin: 0 -20px;
   background-color: black;
   color: white;
   text-align: center;
   border-top: 3px solid white;
 }
 
-footer>p {
+footer > p {
   text-align: center;
 }
 
+/* List items */
 li {
-
   list-style-type: none;
   text-decoration: none;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+  .menuzinho {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  .menu-hamburguer.active {
+    display: block;
+  }
+  
+  .gavioes {
+    position: sticky;
+    top: 45px;
+    right: 50%;
+    transform: translate(50%);
+  }
 }
