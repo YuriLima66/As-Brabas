@@ -273,6 +273,7 @@ footer {
   color: white;
   text-align: center;
   border-top: 3px solid white;
+  width: 98vw;
 }
 
 footer > p {
@@ -302,5 +303,9 @@ li {
     top: 45px;
     right: 50%;
     transform: translate(50%);
+  }
+  #texto_historia{
+    width: 70vw;
+    margin: auto;
   }
 }
